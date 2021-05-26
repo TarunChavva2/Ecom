@@ -29,7 +29,8 @@ export default function ProductCard(props) {
                     image={image}
                 />
                 <Typography>
-                    {description}{style}
+                    {title}
+
                 </Typography>
                 <Typography className={classes.price}>
                     {currencyFormat}{price}
