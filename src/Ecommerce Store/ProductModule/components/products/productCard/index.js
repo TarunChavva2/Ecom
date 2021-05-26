@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ShareIcon from "@material-ui/icons/Share";
 import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from '@material-ui/core/CardHeader';
+import { CardActionArea } from '@material-ui/core';
 
 export default function ProductCard(props) {
     const classes = useStyles();
@@ -16,6 +17,7 @@ export default function ProductCard(props) {
     console.log(image);
     return (
         <Card className={classes.root}>
+
             <CardHeader
                 action={
                     <IconButton aria-label="settings">
@@ -23,23 +25,23 @@ export default function ProductCard(props) {
                     </IconButton>
                 }
             />
-            <CardContent className={classes.content}>
-                <CardMedia
-                    className={classes.media}
-                    image={image}
-                />
-                <Typography>
-                    {title}
-
-                </Typography>
-                <Typography className={classes.price}>
-                    {currencyFormat}{price}
-                </Typography>
-            </CardContent>
+            <CardActionArea>
+                <CardContent className={classes.content}>
+                    <CardMedia
+                        className={classes.media}
+                        image={image}
+                    />
+                    <Typography className={classes.model}>{title}</Typography>
+                    <Typography className={classes.price}>
+                        {currencyFormat}{price}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
             <CardActions>
                 <Button className={classes.btnstyles1} color='primary' variant='contained' size="small">Buy Now</Button>
                 <Button className={classes.btnstyles2} color='primary' size='small'>More Offers</Button>
             </CardActions>
+
         </Card>
     );
 }

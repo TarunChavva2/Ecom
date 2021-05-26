@@ -1,6 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
+    model: {
+        color: 'gray',
+        padding: 5,
+        fontWeight: 600,
+        fontSize: 13
+    },
     root: {
         margin: 15,
         width: 250,
@@ -35,6 +41,7 @@ const useStyles = makeStyles({
     },
     price: {
         color: 'gray',
+        fontSize: 13
     }
 });
 
